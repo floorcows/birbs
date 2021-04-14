@@ -1,0 +1,42 @@
+
+birb{
+  individualité,
+  past_position, //Could be a table
+  past_speed,
+  acceleration,
+}
+
+chunk{
+  taille, //possiblement
+  position,
+  vecteur oiseau,
+  champs de force par rapport au monde initialisé,
+  champs de force qui bouge, //Possiblement
+}
+
+world{
+  mat info_chunk,
+  list birb,
+  list obj,
+}
+
+liste triangles{
+    triangles,
+    couleur
+}
+
+
+world fonction_qui_appelle_generation_au_bon_moment();
+    topologie_chunk generation_topologie(seed, chunk_pos):
+    liste_triangle generation_affichage(topologie_chunk);
+    matrice_champ generation_champ(topologie_chunk);
+    chunk_load()
+    chunk_unload()
+
+
+(birb list) calcul positions(birb list);
+(birb list) calcul accel(birb list, mat info_chunk)
+  ->calcul interaction birb(),
+  ->calcul interaction monde()
+
+(????) affichage(???)
