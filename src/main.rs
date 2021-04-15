@@ -29,11 +29,11 @@ struct Chunk {
     size: u32,
     pos: Vector_i32,
     birbs: Vec<Birb>,
-    field: [[[Vector_f32; 3]; 3]; 3], /*alloué dynamiquement pour le momenet à voir si c'est bien */
+    field: [[[Vector_f32; 100]; 100]; 100], /*alloué dynamiquement pour le momenet à voir si c'est bien */
 }
 
 struct World {
     worldsize: u32,
-    chunks: [[[Chunk; 100]; 100]; 100],
+    chunks: [[[Chunk; worldsize]; worldsize]; worldsize],
     birbs: Vec<Birb>,
 }
